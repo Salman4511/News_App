@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/controllers/news_controller.dart';
-import 'package:news_app/view/news_screen.dart';
+import 'package:news_app/view/tab_bar_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'News App',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.grey,
         ),
-        home: NewsScreen(),
+        home: const TabBarScreen(),
       ),
     );
   }

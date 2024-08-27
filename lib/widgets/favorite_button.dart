@@ -16,6 +16,7 @@ class FavoriteButton extends StatelessWidget {
             ? Icons.favorite
             : Icons.favorite_border,
         color: Colors.red,
+        size: 40,
       ),
       onPressed: () {
         Provider.of<NewsController>(context, listen: false)
