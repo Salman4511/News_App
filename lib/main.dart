@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/controllers/news_controller.dart';
+import 'package:news_app/view/news_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,15 +12,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-       
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (context) => NewsController(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'News App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: NewsScreen(),
       ),
-      home:  ,
     );
   }
 }
